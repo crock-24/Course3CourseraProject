@@ -1,0 +1,22 @@
+---
+title: "CodeBook for 'Human Activity Recognition Using Smartphones Dataset'"
+author: "Cody"
+date: "2023-06-12"
+output: pdf_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+# This sheet is meant to provide some more context around the data that can be found in:
+- 'testing_set.txt'
+- 'testing_set_averages.txt'
+- 'training_set.txt'
+- 'training_set_averages.txt'
+
+# Headers for the dataset:
+## NOTE: The 'Subject' column contains information about the participants and the 'Activity' column contains information about what activity they were participating in, the rest of the headers contain information about the type of Accelerometer data that was collected
+```{r, echo=FALSE}
+read.table('testing_set.txt', header = TRUE) %>%
+  names
+```
